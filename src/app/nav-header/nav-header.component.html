@@ -1,30 +1,28 @@
 <div class=matcard>
   <mat-card>
 
+    <a routerLink="/home">
+      <span style="color:purple;font-size:200%;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{title}}</span>
+    </a>
   
-
-  <a routerLink="/home">
-    <span style="color:purple;font-size:200%;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{title}}</span>
-  </a>
-  
-
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-  </button>
-  
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <a routerLink="/home">
-        <span>Home</span>
-      </a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
     </button>
+  
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <a routerLink="/home">
+          <span>Home</span>
+        </a>
+      </button>
 
-    <button mat-menu-item>
-      <a routerLink="/my-climbs-list">
-        <span>My Climbs</span>
-      </a>
-    </button>
-  </mat-menu>
+      <button mat-menu-item>
+        <a routerLink="/my-climbs-list">
+          <span>My Climbs</span>
+        </a>
+      </button>
+    </mat-menu>
+
   </mat-card>
 </div>
 
