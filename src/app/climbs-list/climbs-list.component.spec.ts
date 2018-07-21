@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinkFooterComponent } from './link-footer.component';
+import { ClimbsListComponent } from './climbs-list.component';
 
-describe('LinkFooterComponent', () => {
-  let component: LinkFooterComponent;
-  let fixture: ComponentFixture<LinkFooterComponent>;
+describe('ClimbsListComponent', () => {
+  let component: ClimbsListComponent;
+  let fixture: ComponentFixture<ClimbsListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LinkFooterComponent ]
+      declarations: [ ClimbsListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LinkFooterComponent);
+    fixture = TestBed.createComponent(ClimbsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
