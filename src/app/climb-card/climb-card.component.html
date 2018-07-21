@@ -1,3 +1,21 @@
-<p>
-  climb-card works!
-</p>
+<mat-card *ngFor="let climb of climbs">
+  <mat-card-content class="climb-info" >
+
+    <div>
+      <h3>{{climb.name}}</h3>
+      <div><span>Grade: </span>{{climb.grade}}</div>
+      <div><span>Location: </span>{{climb.location}}</div>
+      <div><span>Rating: </span>{{climb.rating}}</div>
+    </div>
+
+    <div>
+      <button (click)="add(climb)">
+        <span>Add to My To Climb List</span>
+      </button>
+      <button (click)="remove(climb)">
+        <span>Remove from My To Climb List</span>
+      </button>
+    </div>
+
+  </mat-card-content>
+</mat-card>
