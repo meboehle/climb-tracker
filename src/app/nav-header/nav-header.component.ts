@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavHeaderComponent implements OnInit {
 
-  title = "Climbs";
+  title = "Rock Climbing Guide";
 
   constructor() { }
 
