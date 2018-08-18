@@ -2,7 +2,7 @@
 <div class="container-fluid no-padding">
   <div class="row">
     <div class="col-md-8">
-      <h1>BLANK</h1>
+      <h1>BLANK</h1> <!--ADD NEW COMPONENT HERE??-->
     </div>
 
     <div class="col-md-4">
@@ -24,10 +24,10 @@
                   </div>
               
                   <button type="button" class="btn btn-primary" *ngIf="climbService.added(climb) === false" (click)="climbService.addClimb(climb)">
-                    <span>Add To Climb List</span>
+                    <span>Add To List</span>
                   </button>
                   <button type="button" class="btn btn-primary" *ngIf="climbService.added(climb) === true"(click)="climbService.removeClimb(climb)">
-                    <span>Remove To Climb List</span>
+                    <span>Remove From List</span>
                   </button>
                 </mat-card-content>
             </mat-card>
