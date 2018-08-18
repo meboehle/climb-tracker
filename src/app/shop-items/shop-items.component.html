@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div style="text-align:center" class="card-header">Climbing Gear</div>
+      </div>
+          
+      
+      <mat-card *ngFor="let item of shopItems">
+        <mat-card-content style="text-align: center">
+          <div>
+            <img style="width:10em" class="img-fluid" src={{item.image}} />
+            <h3>{{item.desc}}</h3>
+            <div>Price: ${{item.price}}</div>
+            <div class="btn-group">
+              <button class="btn btn-primary" (click)="shopService.decQuantity(item)">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input disabled type="number" class="form-control" style="width:60px;text-align:right" [(ngModel)]="item.quantity">
+              <button class="btn btn-primary" (click)="shopService.incQuantity(item)">
+                <i class="fas fa-plus"></i>  
+              </button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div style="text-align:center" class="card-header">My Shopping Cart</div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let item of shopService.items">
+          <div>{{item.quantity}} x {{item.desc}} ${{item.quantity * item.price | number: "1.2-2"}}</div>
+        </li>
+        <li class="list-group-item">
+          <h4>Checkout Total: ${{shopService.getCheckout() | number: "1.2-2" }}</h4>
+        </li>
+      </ul>
+      
+    </div>
+
+  </div>
+</div>

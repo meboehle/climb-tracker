@@ -1,21 +1,62 @@
-<mat-card *ngFor="let climb of climbs">
-  <mat-card-content class="climb-info" >
-
-    <div>
-      <h3>{{climb.name}}</h3>
-      <div><span>Grade: </span>{{climb.grade}}</div>
-      <div><span>Location: </span>{{climb.location}}</div>
-      <div><span>Rating: </span>{{climb.rating}}</div>
+<app-climb-of-day></app-climb-of-day>
+<div class="container-fluid no-padding">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>BLANK</h1>
     </div>
 
-    <div>
-      <button (click)="add(climb)">
+    <div class="col-md-4">
+
+      <div class="card">
+        <div style="text-align:center" class="card-header">
+          <h3>Boulder Problems</h3>
+        </div>
+      </div>
+
+      <div class="scrollbox">
+        <div class="climb-card-container" *ngFor="let climb of climbs">
+            <mat-card>
+                <mat-card-content class="climb-info">
+                  <div>
+                    <h4>{{climb.name}}</h4>
+                    <div><span>Grade: </span>{{climb.grade}}</div>
+                    <div><span>Location: </span>{{climb.location}}</div>
+                  </div>
+              
+                  <button type="button" class="btn btn-primary" *ngIf="climbService.added(climb) === false" (click)="climbService.addClimb(climb)">
+                    <span>Add To Climb List</span>
+                  </button>
+                  <button type="button" class="btn btn-primary" *ngIf="climbService.added(climb) === true"(click)="climbService.removeClimb(climb)">
+                    <span>Remove To Climb List</span>
+                  </button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<climb-of-day></climb-of-day>
+<mat-divider></mat-divider>
+<h2 style="text-align:center">Boulder Problems</h2>
+<div class="scrollbox">
+  <mat-card *ngFor="let climb of climbs">
+    <mat-card-content class="climb-info" >
+      <div>
+        <h3>{{climb.name}}</h3>
+        <div><span>Grade: </span>{{climb.grade}}</div>
+        <div><span>Location: </span>{{climb.location}}</div>
+      </div>
+          
+      <button mat-raised-button color=accent *ngIf="climbService.added(climb) === false" (click)="climbService.addClimb(climb)">
         <span>Add to My To Climb List</span>
       </button>
-      <button (click)="remove(climb)">
+      <button mat-raised-button color=accent *ngIf="climbService.added(climb) === true"(click)="climbService.removeClimb(climb)">
         <span>Remove from My To Climb List</span>
       </button>
-    </div>
-
-  </mat-card-content>
-</mat-card>
+      
+    </mat-card-content>
+  </mat-card>
+</div>-->
