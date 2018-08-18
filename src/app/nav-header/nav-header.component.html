@@ -1,3 +1,5 @@
+<!--
+
 <div class=matcard>
   <mat-card>
 
@@ -10,6 +12,7 @@
     </button>
   
     <mat-menu #menu="matMenu">
+
       <button mat-menu-item>
         <a routerLink="/home">
           <span>Home</span>
@@ -21,9 +24,19 @@
           <span>My Climbs</span>
         </a>
       </button>
+
     </mat-menu>
 
   </mat-card>
 </div>
 
-<banner></banner>
+
+
+-->
+
+<nav class="navbar navbar-dark bg-dark">
+  <h1 style="color: white">{{title}}</h1>
+  <a style="color: white" routerLink="/home">Home</a>
+  <a style="color: white" routerLink="/my-climbs-list">My Climbs List</a>
+  <a style="color: white" routerLink="/climb-shop">Climb Shop</a>
+</nav>
