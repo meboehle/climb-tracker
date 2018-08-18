@@ -1,28 +1,20 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Climb } from '../climb';
+import { Component, OnInit } from '@angular/core';
 import { CLIMBS } from '../mock-climbs';
+import { ClimbService } from '../climb.service';
 
 @Component({
-  selector: 'climb-card',
+  selector: 'app-climb-card',
   templateUrl: './climb-card.component.html',
   styleUrls: ['./climb-card.component.scss']
 })
+
 export class ClimbCardComponent implements OnInit {
 
   climbs = CLIMBS;
 
-  @Output() climbAdded = new EventEmitter<Climb>();
-
-  constructor() { }
+  constructor(public climbService: ClimbService) { }
 
   ngOnInit() {
   }
 
-  add(climb: Climb): void {
-    this.climbAdded.emit(climb);
-  }
-
-  remove(climb: Climb): void {
-
-  }
 }
