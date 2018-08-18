@@ -1,27 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Climb } from '../climb';
+import { ClimbService } from '../climb.service';
 
 @Component({
-  selector: 'climbs-list',
+  selector: 'app-climbs-list',
   templateUrl: './climbs-list.component.html',
   styleUrls: ['./climbs-list.component.scss']
 })
 export class ClimbsListComponent implements OnInit {
 
-  climbList: Climb[];
-
-  constructor() { }
+  constructor(public climbService: ClimbService) { }
 
   ngOnInit() {
-    this.getClimbList();
-  }
-
-  getClimbList(): Climb[] {
-    return this.climbList;
-  }
-
-  addClimb(climb: Climb) : void {
-    this.climbList.push(climb);
   }
 
 }
