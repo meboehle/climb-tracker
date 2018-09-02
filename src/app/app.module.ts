@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatMenuModule } from '@angular/material'; 
+import { MatMenuModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
@@ -20,6 +20,7 @@ import { ClimbCardComponent } from './climb-card/climb-card.component';
 import { ClimbsListComponent } from './climbs-list/climbs-list.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ShopItemsComponent } from './shop-items/shop-items.component';
+import { ClimbExperienceFormComponent } from './climb-experience-form/climb-experience-form.component';
 
 
 
@@ -30,7 +31,8 @@ import { ShopItemsComponent } from './shop-items/shop-items.component';
     ClimbOfDayComponent,
     ClimbCardComponent,
     ClimbsListComponent,
-    ShopItemsComponent
+    ShopItemsComponent,
+    ClimbExperienceFormComponent
   ],
   imports: [
     BrowserModule,
