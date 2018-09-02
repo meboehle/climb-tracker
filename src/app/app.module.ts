@@ -21,6 +21,7 @@ import { ClimbsListComponent } from './climbs-list/climbs-list.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ShopItemsComponent } from './shop-items/shop-items.component';
 import { ClimbExperienceFormComponent } from './climb-experience-form/climb-experience-form.component';
+import { ClimbExperienceComponent } from './climb-experience/climb-experience.component';
 
 
 
@@ -32,7 +33,8 @@ import { ClimbExperienceFormComponent } from './climb-experience-form/climb-expe
     ClimbCardComponent,
     ClimbsListComponent,
     ShopItemsComponent,
-    ClimbExperienceFormComponent
+    ClimbExperienceFormComponent,
+    ClimbExperienceComponent
   ],
   imports: [
     BrowserModule,
