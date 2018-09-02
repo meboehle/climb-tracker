@@ -1,0 +1,12 @@
+<div class="card">
+  <h3 style="text-align:center" class="card-header">Climbing Experience</h3>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let exp of getExperiences()">
+    <div>Climb Pref: {{exp.climbTypePref}}</div>
+    <div>Years Experience: {{exp.yearsExp}}</div>
+    <div>Why Climb: {{exp.whyClimb}}</div>
+    <div *ngIf="exp.favRoute">Favorite Route: {{exp.favRoute}}</div>
+    <div *ngIf="exp.favBrand">Favorite Brand: {{exp.favBrand}}</div>
+  </li>
+</ul>
